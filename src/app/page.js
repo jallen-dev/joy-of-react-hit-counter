@@ -21,10 +21,17 @@ writeFile(
 */
 
 function Home() {
+  const file = readFile(DATABASE_PATH);
+  let { hits } = JSON.parse(file);
+  hits++;
+
+  const newFile = JSON.stringify({ hits });
+  writeFile(DATABASE_PATH, newFile);
+
   return (
     <main>
       <h1>Welcome!</h1>
-      <p>You are visitor number X.</p>
+      <p>You are visitor number {hits}.</p>
     </main>
   );
 }
