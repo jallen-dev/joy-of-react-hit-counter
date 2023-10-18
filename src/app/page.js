@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import {
-  readFile,
-  writeFile,
-} from '../helpers/file-helpers';
+import { readFile, writeFile } from "../helpers/file-helpers";
 
-const DATABASE_PATH = '/src/database.json';
+const DATABASE_PATH = "/src/database.json";
 
 /*
 `readFile` takes 1 argument:
