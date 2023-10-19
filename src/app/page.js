@@ -21,6 +21,8 @@ writeFile(
 );
 */
 
+export const dynamic = "force-dynamic";
+
 function Home() {
   const file = readFile(DATABASE_PATH);
   let { hits } = JSON.parse(file);
